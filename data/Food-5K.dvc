@@ -1,0 +1,5 @@
+outs:
+- md5: fc9635c1dc916a5ae58b43c36402bcbc.dir
+  size: 905394284
+  nfiles: 10000
+  path: Food-5K
