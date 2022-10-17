@@ -4,3 +4,4 @@
 lightning_logs/*
 lightning_logs
 /resnet50.pth
+/resnet101.pth
