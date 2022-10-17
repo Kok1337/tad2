@@ -1,2 +1,2 @@
 evaluate:
-  model: "resnet50.pth"
+  model: "resnet101.pth"
