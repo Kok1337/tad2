@@ -1,0 +1,15 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - src/prepare.py
+  train:
+    cmd: python src/train.py
+    deps:
+    - src/train.py
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - src/evaluate.py
+    params:
+    - evaluate.model

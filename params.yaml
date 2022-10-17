@@ -1,0 +1,2 @@
+evaluate:
+  model: "resnet18.pth"

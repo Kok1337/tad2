@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: src/train.py
+      md5: 2a33a2b90c3e7b2b286072a8c7290e01
+      size: 33
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: src/evaluate.py
+      md5: 1d421a3d1c4c12880b9b32e404840b69
+      size: 2994
+    params:
+      params.yaml:
+        evaluate.model: resnet18.pth
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: src/prepare.py
+      md5: f18c14ea2cf8067debf0126c05267d6f
+      size: 1542
