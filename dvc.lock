@@ -14,7 +14,7 @@ stages:
       size: 2994
     params:
       params.yaml:
-        evaluate.model: resnet18.pth
+        evaluate.model: resnet50.pth
   prepare:
     cmd: python src/prepare.py
     deps:
