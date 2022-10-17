@@ -3,3 +3,4 @@
 .ipynb_checkpoints/*
 lightning_logs/*
 lightning_logs
+/resnet50.pth
