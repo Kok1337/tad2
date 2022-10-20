@@ -51,7 +51,7 @@ class LitModel(pl.LightningModule):
     def training_step(self, batch, batch_idx):
         x, y = batch
         
-        y_pred = self.forward(x).squeeze()
+        y_pred = self.forward(x.float()).squeeze()
         # y_pred = torch.unsqueeze(y_pred, 0)
         loss = self.loss(y_pred, y)
         
@@ -61,7 +61,7 @@ class LitModel(pl.LightningModule):
     def validation_step(self, val_batch, batch_idx):
         x, y = val_batch
 
-        y_pred = self.forward(x).squeeze()
+        y_pred = self.forward(x.float()).squeeze()
         # y_pred = torch.unsqueeze(y_pred, 0)
         loss = self.loss(y_pred, y)
 
@@ -71,7 +71,7 @@ class LitModel(pl.LightningModule):
     def test_step(self, batch, batch_idx):
         x, y = batch
 
-        y_pred = self.forward(x).squeeze()
+        y_pred = self.forward(x.float()).squeeze()
         # y_pred = torch.unsqueeze(y_pred, 0)
         loss = self.loss(y_pred, y)
 
@@ -80,8 +80,6 @@ class LitModel(pl.LightningModule):
 
 image_transformation = A.Compose([
                             A.RandomResizedCrop(256, 256),
-                            A.HorizontalFlip(),
-                            A.Normalize(),
                             ToTensorV2()
                         ])
 

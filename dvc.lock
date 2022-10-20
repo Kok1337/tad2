@@ -10,11 +10,11 @@ stages:
     cmd: python src/evaluate.py
     deps:
     - path: src/evaluate.py
-      md5: 1d421a3d1c4c12880b9b32e404840b69
-      size: 2994
+      md5: dcd36b0ec4edb78486270f81d6c77714
+      size: 2925
     params:
       params.yaml:
-        evaluate.model: resnet101_aug.pth
+        evaluate.model: resnet50_aug.pth
   prepare:
     cmd: python src/prepare.py
     deps:
