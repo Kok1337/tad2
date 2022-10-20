@@ -1,0 +1,4 @@
+outs:
+- md5: 5ecdabf58f1029e8b775accd6c4197bf
+  size: 134470405
+  path: resnet18_aug.pth
