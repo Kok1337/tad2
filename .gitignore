@@ -7,3 +7,4 @@ lightning_logs
 /resnet101.pth
 /evaluate.model
 /resnet101_aug.pth
+/resnet50_aug.pth
